@@ -27,7 +27,7 @@
   <nav id="navbar" class="sticky top-0 z-50 bg-white border-b border-gray-200">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <span class="font-semibold text-navy text-sm hidden md:block">Small Data, Rich Sensing</span>
-      <div class="flex items-center gap-5 text-sm font-medium text-gray-600">
+      <div class="flex items-center gap-3 text-sm font-medium text-gray-600 flex-wrap justify-end">
         <a href="#overview" class="hover:text-navy transition-colors">About</a>
         <a href="#speakers" class="hover:text-navy transition-colors">Speakers</a>
         <a href="#schedule" class="hover:text-navy transition-colors">Schedule</a>
@@ -271,6 +271,17 @@
       </div>
     </div>
   </section>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 10) {
+        nav.classList.add('shadow-sm');
+      } else {
+        nav.classList.remove('shadow-sm');
+      }
+    });
+  </script>
 
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-gray-400 py-8 px-4">
